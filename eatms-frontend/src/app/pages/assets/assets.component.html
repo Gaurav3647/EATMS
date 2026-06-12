@@ -1,0 +1,41 @@
+<div class="container mt-4">
+
+    <h2>Assets</h2>
+  
+    <table class="table table-bordered">
+  
+      <thead>
+        <tr>
+          <th>Asset Code</th>
+          <th>Asset Name</th>
+          <th>Asset Type</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+  
+      <tbody>
+        <tr *ngFor="let asset of assets">
+          <td>{{ asset.assetCode }}</td>
+          <td>{{ asset.assetName }}</td>
+          <td>{{ asset.assetType }}</td>
+          <td>{{ asset.status }}</td>
+          <td>
+            <button
+              class="btn btn-primary btn-sm"
+               (click)="editAsset(asset.id)">
+                   Edit
+            </button>
+
+            <button
+               class="btn btn-danger btn-sm"
+               (click)="deleteAsset(asset.id)">
+                   Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+  
+    </table>
+  
+  </div>

@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  eatms-api:
+    image: eatms-api
+    container_name: eatms-api
+    ports:
+      - "8080:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    depends_on:
+      - eatms-db
+
+  eatms-db:
+    image: postgres:16
+    container_name: eatms-db
+    environment:
+      POSTGRES_DB: eatms
+      POSTGRES_USER: eatms_user
+      POSTGRES_PASSWORD: eatms_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - eatms_pgdata:/var/lib/postgresql/data
+
+volumes:
+  eatms_pgdata:

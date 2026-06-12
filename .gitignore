@@ -1,7 +1,11 @@
 bin/
 obj/
 .vs/
+.vscode/
+node_modules/
+
 *.user
 *.suo
 *.log
+
 appsettings.Development.json

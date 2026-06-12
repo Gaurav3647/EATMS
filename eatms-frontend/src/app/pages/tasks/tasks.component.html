@@ -1,0 +1,41 @@
+<div class="container mt-4">
+
+    <h2>Tasks</h2>
+  
+    <table class="table table-bordered">
+  
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Status</th>
+          <th>Due Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+  
+      <tbody>
+        <tr *ngFor="let task of tasks">
+          <td>{{ task.title }}</td>
+          <td>{{ task.description }}</td>
+          <td>{{ task.status }}</td>
+          <td>{{ task.dueDate | date:'dd-MM-yyyy' }}</td>
+          <td>
+            <button
+               class="btn btn-primary btn-sm"
+               (click)="editTask(task.id)">
+                 Edit
+            </button>
+
+            <button
+               class="btn btn-danger btn-sm"
+               (click)="deleteTask(task.id)">
+                 Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+  
+    </table>
+  
+  </div>

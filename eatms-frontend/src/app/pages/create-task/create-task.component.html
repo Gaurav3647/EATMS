@@ -1,0 +1,56 @@
+<div class="container mt-4">
+
+    <h2>Create Task</h2>
+  
+    <div class="mb-3">
+      <label class="form-label">Title</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="title">
+    </div>
+  
+    <div class="mb-3">
+      <label class="form-label">Description</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="description">
+    </div>
+  
+    <div class="mb-3">
+      <label class="form-label">Status</label>
+      <select
+  class="form-control"
+  [(ngModel)]="status">
+
+  <option value="Pending">Pending</option>
+  <option value="In Progress">In Progress</option>
+  <option value="Completed">Completed</option>
+
+</select>
+    </div>
+  
+    <div class="mb-3">
+      <label class="form-label">Due Date</label>
+      <input
+        type="date"
+        class="form-control"
+        [(ngModel)]="dueDate">
+    </div>
+  
+    <div class="mb-3">
+      <label class="form-label">Assigned User Id</label>
+      <input
+        type="number"
+        class="form-control"
+        [(ngModel)]="assignedToUserId">
+    </div>
+  
+    <button
+    class="btn btn-success"
+    (click)="createTask()">
+    Save Task
+  </button>
+  
+  </div>

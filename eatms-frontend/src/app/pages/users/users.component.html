@@ -1,0 +1,46 @@
+<div class="container mt-4">
+
+    <h2>Users</h2>
+  
+    <table class="table table-bordered">
+  
+      <thead>
+        <tr>
+          <th>Full Name</th>
+          <th>Email</th>
+          <tr>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Actions</th>
+          </tr>
+        
+      </thead>
+  
+      <tbody>
+        <tr *ngFor="let user of users">
+
+            <td>{{ user.fullName }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.role }}</td>
+          
+            <td>
+                <button
+                class="btn btn-primary btn-sm me-2"
+                [routerLink]="['/edit-user', user.id]">
+                    Edit
+                </button>
+          
+                <button
+                class="btn btn-danger btn-sm"
+                (click)="deleteUser(user.id)">
+                    Delete
+                </button>
+            </td>
+          
+          </tr>
+      </tbody>
+  
+    </table>
+  
+  </div>

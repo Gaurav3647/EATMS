@@ -1,0 +1,117 @@
+<div class="container mt-4">
+
+    <h2>EATMS Dashboard</h2>
+
+    <div class="row mt-4">
+
+      <div class="col-md-3">
+        <div class="card bg-primary text-white shadow">
+          <div class="card-body">
+            <h5>Total Assets</h5>
+            <h2>{{ totalAssets }}</h2>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-3">
+        <div class="card bg-info text-white shadow">
+          <div class="card-body">
+            <h5>Available Assets</h5>
+            <h2>{{ availableAssets }}</h2>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-3">
+        <div class="card bg-success text-white shadow">
+          <div class="card-body">
+            <h5>Total Tasks</h5>
+            <h2>{{ totalTasks }}</h2>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-3">
+        <div class="card bg-warning text-dark shadow">
+          <div class="card-body">
+            <h5>Pending Tasks</h5>
+            <h2>{{ pendingTasks }}</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row">
+  
+        <div class="col-md-4">
+            <div class="card shadow">
+              <div class="card-body">
+                <h5>Assets</h5>
+                <p>Manage company assets</p>
+          
+                <a routerLink="/assets" class="btn btn-primary">
+                  View Assets
+                </a>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-4">
+            <div class="card shadow">
+              <div class="card-body">
+                <h5>Tasks</h5>
+                <p>Manage assigned tasks</p>
+          
+                <a routerLink="/tasks" class="btn btn-primary">
+                  View Tasks
+                </a>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-4">
+            <div class="card shadow">
+              <div class="card-body">
+                <h5>Users</h5>
+                <p>Manage system users</p>
+          
+                <a routerLink="/users" class="btn btn-primary">
+                  View Users
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          </div>
+          
+          <div class="row mt-3">
+          
+            <div class="col-md-4">
+              <div class="card shadow">
+                <div class="card-body">
+                  <h5>Create Asset</h5>
+                  <p>Add a new company asset</p>
+          
+                  <a routerLink="/create-asset" class="btn btn-success">
+                    Create Asset
+                  </a>
+                </div>
+              </div>
+            </div>
+          
+            <div class="col-md-4">
+              <div class="card shadow">
+                <div class="card-body">
+                  <h5>Create Task</h5>
+                  <p>Add a new task</p>
+          
+                  <a routerLink="/create-task" class="btn btn-success">
+                    Create Task
+                  </a>
+                </div>
+              </div>
+            </div>
+          
+          </div>
+  
+  </div>

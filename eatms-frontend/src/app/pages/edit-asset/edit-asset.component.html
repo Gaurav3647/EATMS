@@ -1,0 +1,49 @@
+<div class="container mt-4">
+
+    <h2>Edit Asset</h2>
+  
+    <div class="mb-3">
+      <label class="form-label">Asset Code</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="assetCode">
+    </div>
+  
+    <div class="mb-3">
+      <label class="form-label">Asset Name</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="assetName">
+    </div>
+  
+    <div class="mb-3">
+      <label class="form-label">Asset Type</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="assetType">
+    </div>
+  
+    <div class="mb-3">
+      <label class="form-label">Status</label>
+      <select
+  class="form-control"
+  [(ngModel)]="status">
+
+  <option value="Available">Available</option>
+  <option value="Assigned">Assigned</option>
+  <option value="Under Maintenance">Under Maintenance</option>
+  <option value="Retired">Retired</option>
+
+</select>
+    </div>
+  
+    <button
+  class="btn btn-primary"
+  (click)="updateAsset()">
+  Update Asset
+</button>
+  
+  </div>
